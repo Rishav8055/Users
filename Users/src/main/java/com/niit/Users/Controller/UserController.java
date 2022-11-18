@@ -26,6 +26,7 @@ public class UserController {
     User createdUser=userService.saveUser(user);
     return responseEntity=new ResponseEntity<>("user created", HttpStatus.CREATED);
     }
+    @PostMapping ("/login")
     public ResponseEntity<?> login(@RequestBody User user) throws UserNotFoundException{
         Map<String,String> map=null;
         try {
